@@ -4,7 +4,6 @@ import { ImageGalleryItem } from './ImageGalleryItem';
 import s from './ImageGallery.module.css';
 
 export const ImageGallery = ({ images, toggleModal }) => {
-  console.log(images);
   return (
     <ul className={s.gallery}>
       {images.map(image => (
