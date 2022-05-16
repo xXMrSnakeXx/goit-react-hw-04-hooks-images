@@ -25,7 +25,6 @@ export class Searchbar extends Component {
       return toast.error('Please enter your query in query text box.');
     }
     changeSearch(input);
-    this.setState({ input: '' });
   };
 
   render() {
