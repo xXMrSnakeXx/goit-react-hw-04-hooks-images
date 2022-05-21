@@ -25,10 +25,6 @@ export const App = () => {
     if (query === '') {
       return;
     }
-    loadImages(query, page);
-  }, [query, page]);
-
-  const loadImages = (query, page) => {
     setLoading(true);
     fetchImages(query, page)
       .then(images => {
@@ -59,7 +55,8 @@ export const App = () => {
       })
       .catch(error => setError(error))
       .finally(() => setLoading(false));
-  };
+  }, [page, query]);
+
   const handleLoadMore = e => {
     setPage(page + 1);
   };
